@@ -132,7 +132,27 @@
     </section>
 
     <footer>
-        
+        {block:Pagination}
+        <div id="pagination">
+              {block:PreviousPage}
+                    <a href="{PreviousPage}">Previous</a>
+              {/block:PreviousPage}
+
+              {block:JumpPagination length="5"}
+                    {block:CurrentPage}
+                          <span class="current_page">{PageNumber}</span>
+                    {/block:CurrentPage}
+
+                    {block:JumpPage}
+                          <a class="jump_page" href="{URL}">{PageNumber}</a>
+                    {/block:JumpPage}
+              {/block:JumpPagination}
+
+              {block:NextPage}
+                    <a href="{NextPage}">Next</a>
+              {/block:NextPage}
+        </div>
+        {/block:Pagination}
     </footer>
 
     </body>
