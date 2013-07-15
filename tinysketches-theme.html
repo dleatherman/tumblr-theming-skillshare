@@ -52,7 +52,18 @@
     </header>
 
     <section class="main" role="main">
-        
+    {block:Posts}
+        {block:Text} {/block:Text}
+        {block:Quote} {/block:Quote}
+        {block:Link} {/block:Link}
+        {block:Chat} {/block:Chat}
+        {block:Answer} {/block:Answer}
+        {block:Photo} {/block:Photo}
+        {block:Panorama} {/block:Panorama}
+        {block:Photoset} {/block:Photoset}
+        {block:Video} {/block:Video}
+        {block:Audio} {/block:Audio}
+    {/block:Posts}
     </section>
 
     <footer>
