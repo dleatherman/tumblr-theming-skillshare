@@ -33,12 +33,13 @@
 
     <header>
         <h1 class="title">{Title}</h1>
-        {block:HasPages}
             <nav class="main" role="navigation">
                 <ul class="links">
-                    {block:Pages}
-                      <li><a href="{URL}">{Label}</a></li>
-                    {/block:Pages}
+                    {block:HasPages}
+                        {block:Pages}
+                          <li><a href="{URL}">{Label}</a></li>
+                        {/block:Pages}
+                    {/block:HasPages}
                     {block:AskEnabled}
                         <li><a href="/ask">{AskLabel}</a></li>
                     {/block:AskEnabled}
@@ -48,7 +49,6 @@
                     <li><a href="/archive">Archive</a></li>
                 </ul>
             </nav>
-        {/block:HasPages}
     </header>
 
     <section class="main" role="main">
