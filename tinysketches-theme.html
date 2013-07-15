@@ -32,7 +32,7 @@
     <body>
 
     <header>
-        <h1 class="title">TinySketch.es</h1>
+        <h1 class="title">{Title}</h1>
         {block:HasPages}
             <nav class="main" role="navigation">
                 <ul class="links">
@@ -40,10 +40,10 @@
                       <li><a href="{URL}">{Label}</a></li>
                     {/block:Pages}
                     {block:AskEnabled}
-                        <li><a href="/ask">Ask for a sketch</a></li>
+                        <li><a href="/ask">{AskLabel}</a></li>
                     {/block:AskEnabled}
                     {block:SubmissionsEnabled}
-                        <li><a href="/submit">Submit a sketch</a></li>
+                        <li><a href="/submit">{SubmitLabel}</a></li>
                     {/block:SubmissionsEnabled}
                     <li><a href="/archive">Archive</a></li>
                     <li><a href="{RSS}">Subscribe via RSS</a></li>
