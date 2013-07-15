@@ -21,6 +21,8 @@
         <!-- Theme CSS -->
         <style type="text/css">
             img { max-width: 100% }
+
+            time { display: block }
         </style>
 
         <!-- Custom CSS -->
@@ -121,9 +123,14 @@
             {/block:Date}
             {block:HasTags}
                 <div class="tags">
-                    {lang:Tagged}: {block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}
+                    <strong>Tagged:</strong> {block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}
                 </div>
             {/block:HasTags}
+            {block:ContentSource}
+              <a href="{SourceURL}" class="source_url">
+                {SourceTitle}
+              </a>
+            {/block:ContentSource}
             {block:IndexPage}
                 {block:NoteCount}
                 <aside class="notes">
@@ -133,22 +140,17 @@
             {/block:IndexPage}
             {block:PermalinkPage}
             <div class="share">
-                <strong>SHARE:</strong> <a href="{ShortURL}">{ShortURL}</a>
+                <strong>Share:</strong> <a href="{ShortURL}">{ShortURL}</a>
             </div>
             {block:PostNotes}
                 <div class="post_notes">
-                    <span class="post_notes title">NOTES:</span>
+                    <strong>Notes:</strong>
                     <a name="notes">
                         {PostNotes}
                     </a>
                 </div>
             {/block:PostNotes}
             {/block:PermalinkPage}
-            {block:ContentSource}
-              <a href="{SourceURL}" class="source_url">
-                {SourceTitle}
-              </a>
-            {/block:ContentSource}
             <hr>
         </article>
     {/block:Posts}
