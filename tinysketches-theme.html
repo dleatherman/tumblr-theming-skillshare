@@ -262,7 +262,17 @@
         {/block:Pagination}
     </footer>
 
+<script src="http://static.tumblr.com/rtmculc/ndemq0azs/jquery-1.10.2.min.js"></script>
+<script src="http://static.tumblr.com/5di3ots/JBimkfpla/jquery.fitvids.min.js"></script>
 <script src="//cdn.symbolset.com/ec1faeb84f729d5fbb860a5ab2400d61535b978f/symbolset.js"></script>
-
+<script>
+  $(function() {
+      $('section.main').fitVids({ customSelector: "iframe[src*='//www.tumblr.com'], iframe[src^='tumblr.com']"});
+      $('a#menu').on('click', function(e) {
+        e.preventDefault();
+        $('nav.main').toggleClass('expanded');
+      });
+  });
+</script>
     </body>
 </html>
