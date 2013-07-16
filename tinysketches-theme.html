@@ -31,6 +31,13 @@
             img { max-width: 100% }
             time { display: block }
             hr { border: 0; background: #999; height: 1px; }
+            .btn {
+                display: block;
+                font-family: 'Permanent Marker', cursive;
+                font-size: 1.5em;
+                font-weight: 400;
+                width: 100%;
+            }
 
             /* Main Layout Styles // Mobile First */
             header {
@@ -75,10 +82,15 @@
                 nav ul, nav li {
                     display: block;
                 }
-                section.main, footer {
+                section.main {
                     float: left;
                     margin: 0 2.5% 2.5%;
                     width: 65%
+                }
+                section.sidebar {
+                    float: left;
+                    margin: 0 2.5% 0 0;
+                    width: 22.5%
                 }
                 .quote .body { font-size: 2.5em; line-height: 1.7 }
             }
@@ -142,10 +154,7 @@
         {/block:Chat}
         {block:Answer}
             <div class="question">
-                {Question}
-            </div>
-            <div class="asker_container">
-                <img src="{AskerPortraitURL-48}"> {Asker}
+                "{Question}"&mdash;{Asker}
             </div>
             <div class="answer">
                 {Answer}
@@ -217,6 +226,16 @@
             <hr>
         </article>
     {/block:Posts}
+    </section>
+
+    <section class="sidebar" role="secondary">
+        <p class="desc">{Description}</p>
+        {block:AskEnabled}
+            <a href="/ask" class="btn">{AskLabel}</a>
+        {/block:AskEnabled}
+        {block:SubmissionsEnabled}
+            <a href="/submit" class="btn">{SubmitLabel}</a>
+        {/block:SubmissionsEnabled}
     </section>
 
     <footer>
