@@ -6,6 +6,9 @@
         <meta charset="utf-8">
         <meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Default Appearance Options -->
+        <meta name="color:Background" content="#fff"/>
+        <meta name="color:Link Color" content="#222"/>
 
         <!-- Appearance option -->
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
@@ -24,9 +27,9 @@
         <style type="text/css">
             *, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
             html { font-size: 62.5% }
-            body { font-family: 'Brawler', serif; font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+            body { background: {color:Background}; font-family: 'Brawler', serif; font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
             /* Shared Styles */
-            a { color: #222; text-decoration: none }
+            a { color: {color:Link Color}; text-decoration: none }
             a:hover { color: #999 }
             img { max-width: 100% }
             time { display: block }
